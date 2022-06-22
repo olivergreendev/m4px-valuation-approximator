@@ -102,7 +102,6 @@ export default {
 <style scoped>
 .container {
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
@@ -113,6 +112,7 @@ export default {
     justify-content: space-evenly;
     width: 100%;
     max-width: 800px;
+    margin-top: 50px;
 }
 .column {
     display: flex;
