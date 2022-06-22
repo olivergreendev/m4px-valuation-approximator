@@ -4,30 +4,28 @@
             <div class="column pp">
                 <div class="row">
                     <div class="row-text">PP</div>
+                </div>
+                <div class="row">
                     <div class="row-box">
                         <input type="number" v-model="text_pp">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="row-text">PPx1.2</div>
                     <div class="row-box">
                         <input type="number" v-model="text_pp_12">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="row-text">PPx1.3</div>
                     <div class="row-box">
                         <input type="number" v-model="text_pp_13">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="row-text">PPx1.4</div>
                     <div class="row-box">
-                        <input type="number" v-model="text_pp_14" step="0.01">
+                        <input type="number" v-model="text_pp_14">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="row-text">PPx1.5</div>
                     <div class="row-box">
                         <input type="number" v-model="text_pp_15">
                     </div>
@@ -35,31 +33,29 @@
             </div>
             <div class="column mu">
                 <div class="row">
-                    <div class="row-text">RETAIL (R)</div>
+                    <div class="row-text">RP</div>
+                </div>
+                <div class="row">
                     <div class="row-box">
                         <input type="number" v-model="text_retail">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="row-text">MU</div>
                     <div class="row-box">
                         <input type="number" v-model="text_mu_1">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="row-text">MU</div>
                     <div class="row-box">
                         <input type="number" v-model="text_mu_2">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="row-text">MU</div>
                     <div class="row-box">
                         <input type="number" v-model="text_mu_3">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="row-text">MU</div>
                     <div class="row-box">
                         <input type="number" v-model="text_mu_4">
                     </div>
@@ -113,7 +109,7 @@ export default {
 }
 .table-wrapper {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-evenly;
     width: 100%;
     max-width: 800px;
@@ -131,7 +127,9 @@ export default {
     margin-bottom: 20px;
 }
 .row-text {
-    margin-right: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #e4e9ee;
 }
 @media only screen and (max-width: 725px) {
     .column {
@@ -140,12 +138,6 @@ export default {
     }
     .row {
         justify-content: center;
-    }
-    .row-box {
-        /* flex: 1; */
-    }
-    .row-box input {
-        /* width: 100%; */
     }
 }
 </style>

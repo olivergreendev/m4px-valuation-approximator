@@ -40,6 +40,7 @@ body {
 }
 input {
   font-family: inherit;
+  width: 100%;
   padding: 10px;
   border-radius: 6px;
   outline: none;
