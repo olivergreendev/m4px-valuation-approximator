@@ -122,7 +122,7 @@ export default {
 .row {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     margin-bottom: 20px;
 }
@@ -135,9 +135,6 @@ export default {
     .column {
         width: 100%;
         max-width: 100%;
-    }
-    .row {
-        justify-content: center;
     }
 }
 </style>
