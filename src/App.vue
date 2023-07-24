@@ -64,6 +64,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   font-size: 20px;
   font-weight: 600;
   color: yellow;
@@ -106,5 +107,13 @@ input[disabled] {
 
 .logo .gray {
   color: #4c4c4c;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.orange {
+  color: #ff8200;
 }
 </style>

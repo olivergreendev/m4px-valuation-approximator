@@ -2,60 +2,62 @@
   <div class="container">
     <div class="content-wrapper">
       <div class="header">
-        <h1 class="logo"> <span class="purple">guaranteed</span><span class="gray">more</span> </h1>
+        <h1 class="logo"> <span class="purple">M4</span><span class="orange">PX</span>.COM </h1>
         <p class="sub-header"> valuation approximator </p>
         <p> disclaimer - notice </p>
         <p> the purpose of this approximator is as a general indicator ONLY and does NOT form part of any formal offer.
         </p>
-        <p> <strong> this facility is intended exclusively for the use of GM Partners only </strong> </p>
+        <p> <strong> this facility is intended exclusively for the use of authorised commercial service providers Partner Main Dealers to 4816 Brand only </strong> </p>
+        <p> enter mean average (ideally 3 or more) Marketing Sales Value Price - as current on AutoTrader </p>
       </div>
       <div class="fields">
         <!-- User Input -->
         <div class="input-wrapper">
-          <div class="input-prefix">GM</div>
+          <div class="input-prefix static">
+            <div>M4</div>
+            <div class="yellow">PX</div>
+          </div>
           <div class="currency-symbol">£</div>
           <input type="number"
                  v-model="userEntry">
         </div>
-        <!-- Condition A -->
+        <!-- Field A -->
         <div class="input-wrapper">
-          <div class="vehicle-condition">A</div>
-          <div class="input-prefix static">GM</div>
+          <div class="input-prefix static">
+            <div>M4</div>
+            <div class="yellow">PX</div>
+          </div>
           <div class="currency-symbol">£</div>
           <input type="number"
                  v-model="computedValues.condition_a"
                  disabled>
         </div>
-        <!-- Condition B -->
+        <!-- Field B -->
         <div class="input-wrapper">
-          <div class="vehicle-condition">B</div>
-          <div class="input-prefix static">GM</div>
+          <div class="input-prefix static">
+            <div>M4</div>
+            <div class="yellow">PX</div>
+          </div>
           <div class="currency-symbol">£</div>
           <input type="number"
                  v-model="computedValues.condition_b"
                  disabled>
         </div>
-        <!-- Condition C -->
+        <!-- Field C -->
         <div class="input-wrapper">
-          <div class="vehicle-condition">C</div>
-          <div class="input-prefix static">GM</div>
+          <div class="input-prefix static">
+            <div>M4</div>
+            <div class="yellow">PX</div>
+          </div>
           <div class="currency-symbol">£</div>
           <input type="number"
                  v-model="computedValues.condition_c"
                  disabled>
         </div>
-        <!-- Condition D -->
-        <div class="input-wrapper">
-          <div class="vehicle-condition">D</div>
-          <div class="input-prefix static">GM</div>
-          <div class="currency-symbol">£</div>
-          <input type="number"
-                 v-model="computedValues.condition_d"
-                 disabled>
-        </div>
       </div>
       <div class="footer">
-        <p class="sub-header disclaimer"> INTERNAL USE ONLY </p>
+        <p class="sub-header"> SELLER & DEALER NOTE </p>
+        <p class="sub-header"> any residual funds are paid to the Seller from M4PX </p>
       </div>
     </div>
   </div>
@@ -71,7 +73,6 @@ export default {
         condition_a: 0,
         condition_b: 0,
         condition_c: 0,
-        condition_d: 0,
       },
     }
   },
@@ -86,9 +87,8 @@ export default {
   methods: {
     calculateInitialValues() {
       this.computedValues.condition_a = Number((this.userEntry - (this.userEntry * 0.1)) - 800).toFixed(2);
-      this.computedValues.condition_b = Number((this.userEntry - (this.userEntry * 0.13)) - 800).toFixed(2);
-      this.computedValues.condition_c = Number((this.userEntry - (this.userEntry * 0.17)) - 800).toFixed(2);
-      this.computedValues.condition_d = Number((this.userEntry - (this.userEntry * 0.22)) - 800).toFixed(2);
+      this.computedValues.condition_b = Number((this.userEntry - (this.userEntry * 0.22)) - 800).toFixed(2);
+      this.computedValues.condition_c = Number((this.computedValues.condition_b * 0.8)).toFixed(2);
     },
   },
 }
@@ -107,7 +107,7 @@ export default {
 }
 
 .container .content-wrapper .header .logo {
-  color: gray;
+  color: #333333;
   font-size: 36px;
 }
 
